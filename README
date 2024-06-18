@@ -1,0 +1,6 @@
+pgwen
+-----
+
+The typical password generator, except this does more than just
+pseudo-randomly picking characters from an array and concatenating
+everything together to finally print the output.
