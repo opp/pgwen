@@ -35,7 +35,11 @@ int gen(char **argv)
         } else {
             randomizer_modval = 2;
         }
+    } else if (strcmp(argv[1], "-h") == 0) {
+        printf("pgwen [gen_type *required] [gen_length] [include_special|include_numbers]\n");
+        return 0;
     } else {
+        fprintf(stderr, "ERROR: Expected 'pgwen [pw|pp]' Got: %s\n", argv[1]);
         return 1;
     }
 
@@ -68,6 +72,6 @@ int main(int argc, char **argv)
     if (argc == 1) {
         return 1;
     } else {
-        gen(argv);
+        return(gen(argv));
     }
 }
